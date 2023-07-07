@@ -37,7 +37,9 @@ async function fetchSuperheroData(id) {
           </div>
           <br/> 
           <div id="listItemLeftDiv">
-          <h1><label for="${allSuperHeroList.id}">${allSuperHeroList.name}</label></h1>
+          <button id="disLikeBtn><i class="fa-solid fa-heart-crack"></i></button>
+          <h1><label for="${allSuperHeroList.id}">${allSuperHeroList.name}</label>
+          </h1>
           </div>
           <br/>
           
@@ -46,7 +48,22 @@ async function fetchSuperheroData(id) {
     li.addEventListener("click", function () {
       // Handle the click event here
       console.log(`Clicked on superhero with ID: ${allSuperHeroList.id}`);
-      window.location.href = `superhero.html?id=${allSuperHeroList.id}`;
+      //window.location.href = `superhero.html?id=${allSuperHeroList.id}`;
+      window.open("superhero.html?id=" + allSuperHeroList.id, "_blank");
     });
+    let disLikeBtn=li.querySelector(".disLikeBtn");
     superHeroList.append(li);
-}
+    disLikeBtn.addEventListener("click", function (event) {
+      event.stopPropagation();
+      removeFromFavorites(superhero.id);
+      li.remove();
+    });
+  
+    superHeroList.append(li);
+  }
+  
+  function removeFromFavorites(id) {
+    favouritesCharacterIDs = favouritesCharacterIDs.filter((item) => item !== id);
+    localStorage.setItem("favouritesCharacterIDs", JSON.stringify(favouritesCharacterIDs));
+  }
+
