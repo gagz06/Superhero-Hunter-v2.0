@@ -29,6 +29,9 @@ async function fetchSuperheroData(id) {
       const seriesTag= document.getElementById("seriesTag");
       const storiesTag = document.getElementById("storiesTag")
       //const eventsTag = document.getElementById("storiesTag");
+      if(!superhero.description){
+        superhero.description="No Description found!!";
+      }
   
   
       name.textContent=superhero.name;

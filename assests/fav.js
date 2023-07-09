@@ -4,12 +4,10 @@ const hash = "05df130a5162d748ed5ff65556f3565a";
 const ts = 1;
 const superHeroList = document.getElementById("superHeroList");
 let favouritesCharacterIDs = JSON.parse(localStorage.getItem("favouritesCharacterIDs"));
-if(favouritesCharacterIDs){
+if(favouritesCharacterIDs.length!=0){
   fillFavDetails();
 }else{
-  const li = document.createElement("li");
-  li.innerHTML=`<h1>No Super Hero added to favourites</h1>`;
-  superHeroList.append(li);
+  emptyFavList();
 }
 function fillFavDetails(){
     for(let i=0;i<favouritesCharacterIDs.length;i++){
@@ -17,6 +15,11 @@ function fillFavDetails(){
     }
 }
 
+function emptyFavList(){
+  const li = document.createElement("li");
+  li.innerHTML=`<h1>No Super Hero added to favourites</h1>`;
+  superHeroList.append(li);
+}
 
 async function fetchSuperheroData(id) {
     try {
@@ -77,5 +80,9 @@ async function fetchSuperheroData(id) {
   function removeFromFavorites(id) {
     favouritesCharacterIDs = favouritesCharacterIDs.filter((item) => item.toString() !== id.toString());
     localStorage.setItem("favouritesCharacterIDs", JSON.stringify(favouritesCharacterIDs));
+    if(favouritesCharacterIDs.length==0){
+      emptyFavList();
+    }
+    
   }
 

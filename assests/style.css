@@ -65,7 +65,7 @@ input{
 }
 
 .result-box {
-    max-height: 300px;
+    max-height: 160px;
     overflow-y: auto;
   }
   
@@ -80,6 +80,42 @@ padding: 15px 10px;
     border-radius: 3px;
     padding: 15px 10px;
 }
-.likeBtn{
+/* .likeBtn{
  
+} */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: inherit;
+    color: white;
+    overflow-x: auto;
+  }
+.card img{
+    width: 250px;
+    height: 250px;
+    
 }
+
+  .column {
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  
+  .rowCard {
+    
+    margin-top: 10%;
+}
+  
+  
+  .rowCard:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #listOfAllHeroes{
+    list-style: none;
+    display: flex;
+  }

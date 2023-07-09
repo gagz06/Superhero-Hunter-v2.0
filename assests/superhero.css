@@ -63,19 +63,17 @@ body {
       margin-bottom: 20px;
     }
   }
-  /* button{
+   button{
     background: transparent;
-    border: 0;
+    border: solid;
     outline: 0;
+    color: yellow;
+    font-size: 18px;
+    cursor: pointer;
 
   }
-  button .fa-regular{
-    width: 25px;
-    color: #555;
-    font-size: 22px;
-    cursor: pointer;
-  } */
   
+   
   #favLabel a{
   color: inherit;
   text-decoration: none;

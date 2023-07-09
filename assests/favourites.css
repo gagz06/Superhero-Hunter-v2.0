@@ -70,7 +70,7 @@ header {
 }
 #disLike{
   background: transparent;
-  border: 0;
+  border: solid;
   outline: 0;
   font-size: 18px;
   color: yellow;
