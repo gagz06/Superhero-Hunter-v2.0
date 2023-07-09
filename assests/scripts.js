@@ -57,7 +57,7 @@ inputBox.onkeyup = async function () {
           if (id) {
             console.log("Clicked on " + name + ", ID: " + id);
             window.open("superhero.html?id=" + id, "_blank");
-            
+            inputBox.value="";
           } else {
             console.log("ID not found for " + name);
           }

@@ -118,4 +118,9 @@ padding: 15px 10px;
   #listOfAllHeroes{
     list-style: none;
     display: flex;
+    
   }
+  #listOfAllHeroes li{
+    border: solid 2px;
+    
+  } 

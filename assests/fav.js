@@ -4,10 +4,11 @@ const hash = "05df130a5162d748ed5ff65556f3565a";
 const ts = 1;
 const superHeroList = document.getElementById("superHeroList");
 let favouritesCharacterIDs = JSON.parse(localStorage.getItem("favouritesCharacterIDs"));
-if(favouritesCharacterIDs.length!=0){
-  fillFavDetails();
-}else{
+if(favouritesCharacterIDs===null){
   emptyFavList();
+}else{
+  fillFavDetails();
+  
 }
 function fillFavDetails(){
     for(let i=0;i<favouritesCharacterIDs.length;i++){
