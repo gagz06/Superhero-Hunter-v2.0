@@ -4,7 +4,13 @@ const hash = "05df130a5162d748ed5ff65556f3565a";
 const ts = 1;
 const superHeroList = document.getElementById("superHeroList");
 let favouritesCharacterIDs = JSON.parse(localStorage.getItem("favouritesCharacterIDs"));
-fillFavDetails();
+if(favouritesCharacterIDs){
+  fillFavDetails();
+}else{
+  const li = document.createElement("li");
+  li.innerHTML=`<h1>No Super Hero added to favourites</h1>`;
+  superHeroList.append(li);
+}
 function fillFavDetails(){
     for(let i=0;i<favouritesCharacterIDs.length;i++){
         fetchSuperheroData(favouritesCharacterIDs[i]);
@@ -29,33 +35,39 @@ async function fetchSuperheroData(id) {
   function addSuperHeroToDom(allSuperHeroList) {
     const li = document.createElement("li");
     li.className = "listItemTag";
+    if(!allSuperHeroList.description){
+      allSuperHeroList.description="No Description found!!";
+    }
     li.innerHTML = `
           <li>
           <div id="listItemRightDiv">
           <img src="${allSuperHeroList.thumbnail.path}.jpg" class="superhero" data-id=${allSuperHeroList.id}></img>
           <strong><label>${allSuperHeroList.description}</label>
+          
           </div>
           <br/> 
           <div id="listItemLeftDiv">
-          <button id="disLikeBtn><i class="fa-solid fa-heart-crack"></i></button>
           <h1><label for="${allSuperHeroList.id}">${allSuperHeroList.name}</label>
           </h1>
+          <button id="disLike">Remove from Favourites</button>
           </div>
           <br/>
           
           </li>
           `;
-    li.addEventListener("click", function () {
+          
+          superHeroList.append(li);
+          const imgElement = li.querySelector(".superhero");
+          imgElement.addEventListener("click", function () {
       // Handle the click event here
       console.log(`Clicked on superhero with ID: ${allSuperHeroList.id}`);
       //window.location.href = `superhero.html?id=${allSuperHeroList.id}`;
       window.open("superhero.html?id=" + allSuperHeroList.id, "_blank");
     });
-    let disLikeBtn=li.querySelector(".disLikeBtn");
-    superHeroList.append(li);
+    const disLikeBtn = li.querySelector("#disLike");
     disLikeBtn.addEventListener("click", function (event) {
       event.stopPropagation();
-      removeFromFavorites(superhero.id);
+      removeFromFavorites(allSuperHeroList.id);
       li.remove();
     });
   
@@ -63,7 +75,7 @@ async function fetchSuperheroData(id) {
   }
   
   function removeFromFavorites(id) {
-    favouritesCharacterIDs = favouritesCharacterIDs.filter((item) => item !== id);
+    favouritesCharacterIDs = favouritesCharacterIDs.filter((item) => item.toString() !== id.toString());
     localStorage.setItem("favouritesCharacterIDs", JSON.stringify(favouritesCharacterIDs));
   }
 

@@ -68,3 +68,11 @@ header {
   text-decoration: none;
   color: inherit;
 }
+#disLike{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  color: yellow;
+  
+}

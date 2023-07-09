@@ -5,7 +5,12 @@ const privateKey = "8a79129e7cc0b54c239743dc0117ef6f3a5698a5";
 const hash = "05df130a5162d748ed5ff65556f3565a";
 const ts = 1;
 //const favList=[];
-fetchSuperheroData(id);
+if(id){
+  fetchSuperheroData(id);
+}
+else{
+  window.location.href = 'index.html';
+}
 
 
 
@@ -57,6 +62,3 @@ async function fetchSuperheroData(id) {
             alert("Superhero added to favourites!");
           }
   }
-function returnToHome(){
-    window.location.href = 'index.html';
-}
