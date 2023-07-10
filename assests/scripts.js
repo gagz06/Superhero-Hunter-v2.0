@@ -42,7 +42,10 @@ inputBox.onkeyup = async function () {
         li.textContent = name;
         const favoritesBtn = document.createElement("button");
         favoritesBtn.className="likeBtn";
-        favoritesBtn.textContent = "Add to Favorites";
+        //favoritesBtn.textContent = "Add to Favoritess";
+        const icon = document.createElement('i');
+        icon.classList.add('fa-solid','fa-heart');
+        favoritesBtn.appendChild(icon);
         li.appendChild(favoritesBtn);
         ul.appendChild(li);
         favoritesBtn.addEventListener("click", function (event) {

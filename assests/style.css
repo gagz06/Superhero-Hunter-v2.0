@@ -1,134 +1,147 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
-body{
-    /* background: #262a2f; */
-    color: #333;
-    background-image: url("../assests/images/superman.jpg");
-    
+
+body {
+  background-image: url("../assests/images/superman.jpg");
+
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
- 
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#favLabel a{
-    color: inherit;
-    text-decoration: none;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
 }
 
-.search-box{
-    width: 600px;
-    background: #fff;
-    margin: 200px auto 0;
-    border-radius: 5px;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.row{
-    display: flex;
-    align-items: center;
-    padding: 10px 2opx;
+
+#favLabel a {
+  color: inherit;
+  text-decoration: none;
 }
-input{
-    flex: 1;
-    height: 50px;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 18px;
-    color: #333;
-    padding: 20px;
+
+.search-box {
+  width: 600px;
+  background: #fff;
+  margin: 200px auto 0;
+  border-radius: 5px;
 }
-.row button{
-    background: transparent;
-    border: 0;
-    outline: 0;
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 10px 2opx;
+}
+
+input {
+  flex: 1;
+  height: 50px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  color: #333;
+  padding: 20px;
+}
+
+.row button {
+  background: transparent;
+  border: 0;
+  outline: 0;
 
 }
-.row button .fa-solid{
-    width: 50px;
-    color: #555;
-    font-size: 22px;
-    cursor: pointer;
+
+.row button .fa-solid {
+  width: 50px;
+  color: #555;
+  font-size: 22px;
+  cursor: pointer;
 }
-::placeholder{
-    color: #555;
+
+::placeholder {
+  color: #555;
 }
 
 .result-box {
-    
-    position: absolute;
-    width: inherit;
-    background: #fff;
-    max-height: 160px;
-    overflow-y: auto;
-    z-index: 2;
-  }
-  
-.result-box ul{
-border-top: 1px solid #999;
-padding: 15px 10px;
-
+  position: absolute;
+  width: inherit;
+  background: #fff;
+  max-height: 160px;
+  overflow-y: auto;
+  z-index: 2;
 }
 
-.result-box ul li{
-    list-style: none;
-    border-radius: 3px;
-    padding: 15px 10px;
+.result-box ul {
+  border-top: 1px solid #999;
+  padding: 15px 10px;
 }
-/* .likeBtn{
- 
-} */
+
+.result-box ul li {
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likeBtn {
+  margin-left: auto;
+  border: 0;
+  font-size: 20px;
+  background-color: transparent;
+  color: red;
+}
+
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: inherit;
-    color: white;
-    overflow-x: auto;
-  }
-.card img{
-    width: 250px;
-    height: 250px;
-    
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: inherit;
+  color: white;
+  overflow-x: auto;
 }
 
-  .column {
-    float: left;
-    width: 100%;
-    padding: 0 10px;
-  }
-  
-  
-  .rowCard {
-    margin-top: 10%;
-    position: relative;
-    z-index: 1;
+.card img {
+  width: 250px;
+  height: 250px;
+
 }
-  
-  
-  .rowCard:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  #listOfAllHeroes{
-    list-style: none;
-    display: flex;
-    
-  }
-  #listOfAllHeroes li{
-    border: solid 2px;
-    
-  } 
-  
-  
+
+.column {
+  float: left;
+  width: 100%;
+  padding: 0 10px;
+}
+
+
+.rowCard {
+  margin-top: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+
+.rowCard:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#listOfAllHeroes {
+  list-style: none;
+  display: flex;
+
+}
+
+#listOfAllHeroes li {
+  border: solid 2px;
+
+}
