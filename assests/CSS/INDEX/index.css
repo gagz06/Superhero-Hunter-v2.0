@@ -1,31 +1,36 @@
+/* Apply a reset to remove default margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
+/* Set the background image for the body */
 body {
   background-image: url("../../IMAGES/superman.jpg");
 }
 
+/* Styling for the header */
 header {
   background-color: #333;
   color: #fff;
   padding: 20px;
 }
 
+/* Styling for the header container */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Styling for the favorite label in the header */
 #favLabel a {
   color: inherit;
   text-decoration: none;
 }
 
+/* Styling for the search box */
 .search-box {
   width: 600px;
   background: #fff;
@@ -33,12 +38,14 @@ header {
   border-radius: 5px;
 }
 
+/* Styling for the row inside the search box */
 .row {
   display: flex;
   align-items: center;
-  padding: 10px 2opx;
+  padding: 10px 20px;
 }
 
+/* Styling for the input field */
 input {
   flex: 1;
   height: 50px;
@@ -50,13 +57,14 @@ input {
   padding: 20px;
 }
 
+/* Styling for the buttons inside the row */
 .row button {
   background: transparent;
   border: 0;
   outline: 0;
-
 }
 
+/* Styling for the font awesome icons */
 .row button .fa-solid {
   width: 50px;
   color: #555;
@@ -64,10 +72,12 @@ input {
   cursor: pointer;
 }
 
+/* Styling for the placeholder text */
 ::placeholder {
   color: #555;
 }
 
+/* Styling for the result box */
 .result-box {
   position: absolute;
   width: inherit;
@@ -77,11 +87,13 @@ input {
   z-index: 2;
 }
 
+/* Styling for the unordered list inside the result box */
 .result-box ul {
   border-top: 1px solid #999;
   padding: 15px 10px;
 }
 
+/* Styling for each list item inside the result box */
 .result-box ul li {
   list-style: none;
   border-radius: 3px;
@@ -91,6 +103,7 @@ input {
   align-items: center;
 }
 
+/* Styling for the like button */
 .likeBtn {
   margin-left: auto;
   border: 0;
@@ -99,6 +112,7 @@ input {
   color: red;
 }
 
+/* Styling for the card */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
@@ -108,39 +122,40 @@ input {
   overflow-x: auto;
 }
 
+/* Styling for the card image */
 .card img {
   width: 250px;
   height: 250px;
-
 }
 
+/* Styling for the column */
 .column {
   float: left;
   width: 100%;
   padding: 0 10px;
 }
 
-
+/* Styling for the rowCard */
 .rowCard {
   margin-top: 10%;
   position: relative;
   z-index: 1;
 }
 
-
+/* Clearing floats for the rowCard */
 .rowCard:after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* Styling for the listOfAllHeroes */
 #listOfAllHeroes {
   list-style: none;
   display: flex;
-
 }
 
+/* Styling for each list item inside the listOfAllHeroes */
 #listOfAllHeroes li {
   border: solid 2px;
-
 }

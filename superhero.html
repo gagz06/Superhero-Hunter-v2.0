@@ -3,46 +3,45 @@
 <head>
   <title>Superhero Hunter - Superhero Details</title>
   <!-- Include CSS stylesheets -->
-  
-  <link rel="stylesheet" href="./assests/CSS/SUPERHERO/superhero.css">
-  <script src="https://kit.fontawesome.com/d8d112cec0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assests/CSS/SUPERHERO/superhero.css"> <!-- External CSS file -->
+  <script src="https://kit.fontawesome.com/d8d112cec0.js" crossorigin="anonymous"></script> <!-- Font Awesome library -->
 </head>
 <body>
-  <header >
+  <header>
     <div class="header-container">
       <div id="appname">
-        <h1><a href="./index.html">Super Hero</a></h1>
+        <h1><a href="./index.html">Super Hero</a></h1> <!-- Heading for the application name with a link to the homepage -->
       </div>
       <div id="favLabel">
           <h1>
-              <label><a href="./favourites.html">Favourites</a></label>
+              <label><a href="./favourites.html">Favourites</a></label> <!-- Link to the "Favourites" page -->
           </h1>
       </div>
-  </div>
+    </div>
   </header>
   <main>
     <section id="superheroDetails">
       <div id="containerDiv">
         <div id="imageDiv">
-          <img id="potraitImage" alt="goku" src="">
+          <img id="potraitImage" alt="Superhero Image" src=""> <!-- Image of the superhero (initially empty) -->
         </div>
         <div id="superheroSpecs">
-          <h2> <strong><label style="color: yellow;">Name</label></strong></h2>
-          <label id="nameTag"></label>
-          <h2> <strong><label style="color: yellow;">Description</label></strong></h2>
-          <label id="descTag"></label>
-          <label id="comicTag"></label>
-          <label id="seriesTag"></label>
-          <label id="storiesTag"></label>
-          <label id="eventsTag"></label>
-          <button onclick="addToFavourites()">Add to Favourites</i></button>
+          <h2> <strong><label style="color: yellow;">Name</label></strong></h2> <!-- Heading for the superhero's name -->
+          <label id="nameTag"></label> <!-- Placeholder for the superhero's name -->
+          <h2> <strong><label style="color: yellow;">Description</label></strong></h2> <!-- Heading for the superhero's description -->
+          <label id="descTag"></label> <!-- Placeholder for the superhero's description -->
+          <label id="comicTag"></label> <!-- Placeholder for the superhero's comic details -->
+          <label id="seriesTag"></label> <!-- Placeholder for the superhero's series details -->
+          <label id="storiesTag"></label> <!-- Placeholder for the superhero's stories details -->
+          <label id="eventsTag"></label> <!-- Placeholder for the superhero's events details -->
+          <button onclick="addToFavourites()">Add to Favourites</i></button> <!-- Button to add the superhero to the favorites -->
         </div>
-<i class="fa-regular fa-circle-heart"></i>
+        <i class="fa-regular fa-circle-heart"></i> <!-- Icon representing a heart shape -->
       </div>
     </section>
   </main>
 
   <!-- Include JavaScript file -->
-  <script src="./assests/SCRIPTS/SUPERHERO/superHero.js"></script>
+  <script src="./assests/SCRIPTS/SUPERHERO/superHero.js"></script> <!-- External JavaScript file -->
 </body>
 </html>
