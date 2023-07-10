@@ -7,7 +7,10 @@
 
 /* Set the background image for the body */
 body {
-  background-image: url("https://drive.google.com/file/d/1NUWAFQP6IJu3lCZ286UGHBH-PwaETsj6/view?usp=sharing");
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/images6/Superhero-Wallpaper-Desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Styling for the header */
