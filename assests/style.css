@@ -65,8 +65,13 @@ input{
 }
 
 .result-box {
+    
+    position: absolute;
+    width: inherit;
+    background: #fff;
     max-height: 160px;
     overflow-y: auto;
+    z-index: 2;
   }
   
 .result-box ul{
@@ -105,8 +110,9 @@ padding: 15px 10px;
   
   
   .rowCard {
-    
     margin-top: 10%;
+    position: relative;
+    z-index: 1;
 }
   
   
@@ -124,3 +130,5 @@ padding: 15px 10px;
     border: solid 2px;
     
   } 
+  
+  
